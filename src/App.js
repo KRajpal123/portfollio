@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import AboutMe from "./components/About/AboutMe";
+import Experience from "./components/experience/Experience";
 
 const navItems = [
   {
@@ -37,7 +38,7 @@ const navItems = [
     id: 5,
     name: "Experience",
     page: "/experience",
-    component: <Services />,
+    component: <Experience />,
   },
   {
     id: 6,
@@ -46,6 +47,8 @@ const navItems = [
     component: <Contact />,
   },
 ];
+
+
 const App = () => {
   return (
     <Container maxWidth="lg">
@@ -61,7 +64,7 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} /> */}
           {navItems.map((item) => {
-            return <Route path={item.page} element={item.component} />;
+            return <Route path={item.page} element={item.component}  key={item.id} />;
           })}
         </Routes>
       </Grid>
