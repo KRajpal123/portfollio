@@ -13,7 +13,7 @@ const Style = {
 const Services = () => {
   return (
     <>
-      <Grid container>
+      <Grid container id={"services"}>
         <Grid
           item
           style={{

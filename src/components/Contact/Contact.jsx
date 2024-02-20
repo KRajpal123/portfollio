@@ -46,7 +46,7 @@ const style = {
 const Contact = () => {
   return (
     <>
-      <Grid container gap={2}>
+      <Grid container gap={2} id={"contact"}>
         <Grid item xs={12} textAlign={"center"} textTransform={"uppercase"}>
           <Typography variant="h3"> Contact</Typography>
         </Grid>

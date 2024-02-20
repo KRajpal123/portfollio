@@ -22,7 +22,7 @@ const styleDiv = {
 const AboutMe = () => {
   return (
     <>
-      <Grid container mt={5} mb={5} gap={3}>
+      <Grid container mt={5} mb={5} gap={3} id={"about"}>
         <Grid item xs={12} md={4}>
           <div>
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "60vh" }}>

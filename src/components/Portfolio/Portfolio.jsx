@@ -56,7 +56,7 @@ const Portfolio = () => {
   const [swap, setSwap] = useState()
   return (
     <>
-      <Grid container mt={5} mb={5}>
+      <Grid container mt={5} mb={5} id={"portfolio"}>
         <Grid
           item
           xs={12}

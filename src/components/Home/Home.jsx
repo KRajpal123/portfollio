@@ -11,26 +11,26 @@ const StyledSpan = styled('span')(
 );
 
 const StyledH1 = styled('h1')({
-  fontSize : "120px",
+  fontSize: "120px",
   fontFamily: "sans-serif"
 
 })
 
 const Home = () => {
   return (
-   <>
-   <Grid container mt={5} mb={5}>
-   <Grid item>
-    <StyledSpan>I'm a</StyledSpan> <br />
-   <StyledH1> Frontend Developer!</StyledH1>
-   </Grid>
-   <Grid item>
-    <PrimaryButton>
-      Previous Projects
-    </PrimaryButton>
-   </Grid>
-   </Grid>
-   </>
+    <>
+      <Grid container mt={5} mb={5} id={"home"}>
+        <Grid item>
+          <StyledSpan>I'm a</StyledSpan> <br />
+          <StyledH1> Frontend Developer!</StyledH1>
+        </Grid>
+        <Grid item>
+          <PrimaryButton>
+            Previous Projects
+          </PrimaryButton>
+        </Grid>
+      </Grid>
+    </>
   )
 }
 

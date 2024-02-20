@@ -1,7 +1,8 @@
 import { Container, Grid, styled } from '@mui/material'
 import React from 'react'
 import FallbackAvatars from '../Avatar';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 const StyledUl = styled('ul')({
     listStyle: 'none',
@@ -56,6 +57,9 @@ const Navbar = (props) => {
                                         color: location.pathname === nav.page ? ActiveLinkStyle.color : "white",
                                         fontWeight: location.pathname === nav.page ? ActiveLinkStyle.fontWeight : 'normal',
                                     }}
+                                    spy={true}
+                                    offset={true}
+                                    duration={100}
                                 >
                                     {nav.name}
                                 </Link>

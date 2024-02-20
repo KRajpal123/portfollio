@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 import Contact from "./components/Contact/Contact";
 import AboutMe from "./components/About/AboutMe";
 import Experience from "./components/experience/Experience";
+import ScrollToTop from "react-scroll-to-top";
 
 const navItems = [
   {
@@ -61,6 +62,19 @@ const App = () => {
             </Grid>
           );
         })}
+      </Grid>
+      <Grid container>
+        <Grid item>
+          <ScrollToTop
+            smooth
+            color="white"
+            style={{
+              background:
+                "linear-gradient(to right, #667eea, 0, #6b8dd6, #8e37d7)",
+              borderRadius: "50%",
+            }}
+          />
+        </Grid>
       </Grid>
     </Container>
   );

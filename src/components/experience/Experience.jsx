@@ -37,7 +37,7 @@ const data = [
 
 const Experience = () => {
     return (
-        <Grid container alignItems={"center"} justifyContent={"center"}>
+        <Grid container alignItems={"center"} justifyContent={"center"} id={"experience"}>
             <Grid item xs={12} textAlign={'center'} mt={3} mb={3}>
                 <Typography variant='h3' textTransform={'uppercase'}>Experience</Typography>
             </Grid>
