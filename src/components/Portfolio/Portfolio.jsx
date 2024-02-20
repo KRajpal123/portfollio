@@ -69,30 +69,32 @@ const Portfolio = () => {
         >
           <Typography variant="h3">Portfolio</Typography>
         </Grid>
-        <Grid container gap={5} mt={5}>
+        <Grid container gap={1} mt={5}>
           {
             projectDetails.map((project, i) => {
               const isSwapped = i % 2 === 1 ? !swap : swap;
               return (
-                <>
-                  <Grid item xs={5}>
-                    <h2>Project {project.id}</h2>
-                    <h1>{project.Name}</h1>
-                    <p>{project.Desc}</p>
-                    <div style={{ display: "flex", margin: "10px", alignItems: "center" }}>
-                      <ArrowRightAltIcon />
-                      <span>Read more</span>
-                    </div>
-                  </Grid>
-                  <Grid item xs={5}>
-                    <div style={styleBorder}>
-                      <div>
-                        <img src={project?.url} alt="imageUrl" />
+                <div key={project.id}>
+                  <Grid container gap={2}>
+                    <Grid item xs={12} md={5}>
+                      <h2>Project {project.id}</h2>
+                      <h1>{project.Name}</h1>
+                      <p>{project.Desc}</p>
+                      <div style={{ display: "flex", margin: "10px", alignItems: "center" }}>
+                        <ArrowRightAltIcon />
+                        <span>Read more</span>
                       </div>
-                    </div>
+                    </Grid>
+                    <Grid item xs={12} md={5}>
+                      <div style={styleBorder}>
+                        <div>
+                          <img src={project?.url} alt="imageUrl" />
+                        </div>
+                      </div>
 
+                    </Grid>
                   </Grid>
-                </>
+                </div>
               )
             })
           }

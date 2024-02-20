@@ -1,7 +1,7 @@
-import { Grid, styled } from '@mui/material'
+import { Container, Grid, styled } from '@mui/material'
 import React from 'react'
 import FallbackAvatars from '../Avatar';
-import { Link,useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const StyledUl = styled('ul')({
     listStyle: 'none',
@@ -38,31 +38,33 @@ const ActiveLinkStyle = {
 const Navbar = (props) => {
     const navItems = props.navItems;
     const location = useLocation();
-    
+
     return (
-        <Grid container gap={2}>
-            <Grid item xs={2}>
-                <FallbackAvatars />
+        <Container maxWidth={'lg'} sx={{ position: "fixed" }}>
+            <Grid container gap={2}>
+                <Grid item xs={2}>
+                    <FallbackAvatars />
+                </Grid>
+                <Grid item xs={9}>
+                    <StyledUl>
+                        {navItems.map((nav) => (
+                            <StyledLi key={nav.id}>
+                                <Link
+                                    to={nav.page}
+                                    style={{
+                                        textDecoration: "none",
+                                        color: location.pathname === nav.page ? ActiveLinkStyle.color : "white",
+                                        fontWeight: location.pathname === nav.page ? ActiveLinkStyle.fontWeight : 'normal',
+                                    }}
+                                >
+                                    {nav.name}
+                                </Link>
+                            </StyledLi>
+                        ))}
+                    </StyledUl>
+                </Grid>
             </Grid>
-            <Grid item xs={9}>
-                <StyledUl>
-                    {navItems.map((nav) => (
-                        <StyledLi key={nav.id}>
-                            <Link
-                                to={nav.page}
-                                style={{
-                                    textDecoration: "none",
-                                    color: location.pathname === nav.page ? ActiveLinkStyle.color : "white",
-                                    fontWeight: location.pathname === nav.page ? ActiveLinkStyle.fontWeight : 'normal',
-                                }}
-                            >
-                                {nav.name}
-                            </Link>
-                        </StyledLi>
-                    ))}
-                </StyledUl>
-            </Grid>
-        </Grid>
+        </Container>
     )
 }
 

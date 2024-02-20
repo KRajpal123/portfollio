@@ -25,15 +25,14 @@ const Services = () => {
         >
           <Typography variant="h3">Services</Typography>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={12} md={5}>
           <Box sx={Style}>
             <div style={{ width: "90%", height: "100%", marginTop: "10px" }}>
               <div
                 style={{
                   width: "90%",
                   display: "flex",
-                  justifyContent: "space-between",
-                  margin: "auto",
+                  justifyContent: "center",
                 }}
               >
                 <div
@@ -56,13 +55,13 @@ const Services = () => {
                   />
                 </div>
                 <div>
-                  <Typography variant="h4">
+                  <Typography variant="h4" ml={5}>
                     DESKTOP APP <br /> DEVELOPMENT
                   </Typography>
                 </div>
               </div>
               <p
-                style={{ wordWrap: "break-word", width: "90%", margin: "auto",marginTop:"20px" }}
+                style={{ wordWrap: "break-word", width: "90%", margin: "auto", marginTop: "20px" }}
               >
                 Get a custom desktop app that fits your business perfectly. It
                 works on all systems and keeps your data safe. As your business
