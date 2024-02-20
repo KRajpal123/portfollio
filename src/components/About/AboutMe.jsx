@@ -17,15 +17,15 @@ const styleDiv = {
   display: "flex",
   justifyContent: "space-between",
   marginTop: "20px",
-  gap:"20px"
+  gap: "20px"
 }
 const AboutMe = () => {
   return (
     <>
       <Grid container mt={5} mb={5} gap={3}>
-        <Grid item xs={4}>
+        <Grid item xs={12} md={4}>
           <div>
-            <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",height:"60vh"}}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "60vh" }}>
               <div style={{ display: "flex", justifyContent: "center" }}>
                 <img src={RajpalReddy} alt="rajpal's" style={imageStyle} />
               </div>
@@ -36,7 +36,7 @@ const AboutMe = () => {
             </div>
           </div>
         </Grid>
-        <Grid item xs={7}>
+        <Grid item xs={12} md={7}>
           <h1>👋 Hello there!</h1>
           <p>
             {" "}

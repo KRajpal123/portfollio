@@ -38,7 +38,7 @@ const style = {
   flexItems: {
     display: "flex",
     alignItems: "center",
-    justifyContent : "space-between",
+    justifyContent: "space-between",
     marginTop: "20px",
   },
 };
@@ -46,11 +46,11 @@ const style = {
 const Contact = () => {
   return (
     <>
-      <Grid container gap={3}>
+      <Grid container gap={2}>
         <Grid item xs={12} textAlign={"center"} textTransform={"uppercase"}>
           <Typography variant="h3"> Contact</Typography>
         </Grid>
-        <Grid item xs={12} md={5}>
+        <Grid item xs={12} md={6}>
           <Typography variant="h5">Drop Me a Message </Typography>
           <p style={{ wordWrap: "break-word" }}>
             Please feel free to reach out to us with any questions or concerns.
@@ -76,7 +76,7 @@ const Contact = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <div
             style={{
               width: "100%",
